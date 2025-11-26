@@ -1,57 +1,62 @@
 @charset "utf-8";
 
 body {
-            background-color: #303030;
-        }
-        div#calcBody {
-            background-color: #909090;
+    background-color: #303030;
+}
+div#calcBody {
+    background-color: #909090;
 
-            width: 500px;
-            height: 650px;
+    width: 500px;
+    height: 550px;
 
-            margin: 20px auto 0px auto;
-            padding-top: 10px;
+    margin: 20px auto 0px auto;
+    padding-top: 10px;
 
-            border: 1px solid #fff;
-            border-radius: 40px;
-            box-shadow: 0px 0px 5px #fff;
-        }
-        div#calcBody h1 {
-            font-family: 'Courier New', Courier, monospace;
-            text-align: center;
-            font-size: 30pt;
-        }
-        div#calcBody p {
-            text-align: center;
-        }
-        /* input config */
-        div#calcBody input {
-            background-color: #ddd;
-        }
+    border: 1px solid #fff;
+    border-radius: 40px;
+    box-shadow: 0px 0px 5px #fff;
+}
+div#calcBody h1 {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 30pt;
+}
+div#calcBody p {
+    text-align: center;
+}
+/* input config */
+div#calcBody input {
+    background-color: #ddd;
+}
 
-        /* text box */
-        input#txtBox {
-            font-size: 16pt;
-            height: 50px;
-            width: 450px;
-        }
-        input.numbers {
-            height: 30px;
-            width: 195px;
-        }
+/* text box */
+input#txtBox {
+    font-size: 16pt;
+    height: 50px;
+    width: 450px;
+}
+input.numbers {
+    height: 30px;
+    width: 195px;
+}
 
-        /* Calculate button */
-        input#calcBtn {
+/* Calculate button */
+input#calcBtn {
+    border: 0px solid black;
 
-            border: 0px solid black;
-            width: 100px;
-            height: 50px;
+    width: 100px;
+    height: 50px;
 
-            font-size: 14pt;
+    font-size: 14pt;
 
-            transition: 0.1s;
-        }
-        input#calcBtn:hover {
-            background-color: #707070;
-            color: #fff;
-        }
+    transition: 0.1s;
+}
+input#calcBtn:hover {
+    background-color: #707070;
+    color: #fff;
+}
+
+footer {
+    text-align: center;
+    color: #fff;
+}
