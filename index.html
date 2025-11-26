@@ -4,10 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <style>
+        body {
+            background-color: #303030;
+        }
+        div#calcBody {
+            background-color: #909090;
+
+            width: 500px;
+            height: 650px;
+
+            margin: 20px auto 0px auto;
+            padding-top: 10px;
+
+            border: 1px solid #fff;
+            border-radius: 40px;
+            box-shadow: 0px 0px 5px #fff;
+        }
+        div#calcBody h1 {
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            font-size: 30pt;
+        }
+        div#calcBody p {
+            text-align: center;
+        }
+        /* input config */
+        div#calcBody input {
+            background-color: #ddd;
+        }
+
+        /* text box */
+        input#txtBox {
+            font-size: 16pt;
+            height: 50px;
+            width: 450px;
+        }
+        input.numbers {
+            height: 30px;
+            width: 195px;
+        }
+
+        /* Calculate button */
+        input#calcBtn {
+
+            border: 0px solid black;
+            width: 100px;
+            height: 50px;
+
+            font-size: 14pt;
+
+            transition: 0.1s;
+        }
+        input#calcBtn:hover {
+            background-color: #707070;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
-    <div>
+    <div id="calcBody">
         <h1>Calculator</h1>
+
+        <p> <input type="text" id="txtBox" readonly placeholder="Resultados"> </p>
+
+        <p>
+            <input type="number" class="numbers" id="num1" min="0" value="0">
+
+            <select id="operation">
+                <optgroup label="Operations">
+                    <option value="plus">+</option>
+                    <option value="minus">-</option>
+                    <option value="times">*</option>
+                    <option value="divided">/</option>
+                </optgroup>
+            </select>
+            
+            <input type="number" class="numbers" id="num2" min="0" value="0">
+        
+        </p>
+
+        <p> <input type="submit" value="Calculate" id="calcBtn" onclick="calc()"> </p>
+
     </div>
+
+    <script>
+        let num1 = document.getElementById('num1')
+        let num2 = document.getElementById('num2')
+        let operation = document.getElementById('operation')
+        let textBox = document.getElementById('txtBox')
+
+        function calc() {
+            if(operation.value == 'plus') {
+                textBox.value = parseFloat(num1.value) + parseFloat(num2.value);
+            } else if(operation.value == 'minus') {
+                textBox.value = parseFloat(num1.value) - parseFloat(num2.value);
+            } else if(operation.value == 'times') {
+                textBox.value = parseFloat(num1.value) * parseFloat(num2.value);
+            } else if(operation.value == 'divided') {
+                textBox.value = parseFloat(num1.value) / parseFloat(num2.value);
+            }
+        }
+
+    </script>
 </body>
 </html>
