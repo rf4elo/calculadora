@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Moderna</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="calculator">
+
+        <input type="text" id="display" readonly>
+
+        <div id="keys">
+            <button onclick="escreverDisplay('1')" >1</button>
+            <button onclick="escreverDisplay('2')">2</button>
+            <button onclick="escreverDisplay('3')">3</button>
+            <button onclick="escreverDisplay('+')" class="specialkeys">+</button>
+            <button onclick="escreverDisplay('4')">4</button>
+            <button onclick="escreverDisplay('5')">5</button>
+            <button onclick="escreverDisplay('6')">6</button>
+            <button onclick="escreverDisplay('-')" class="specialkeys">-</button>
+            <button onclick="escreverDisplay('7')">7</button>
+            <button onclick="escreverDisplay('8')">8</button>
+            <button onclick="escreverDisplay('9')">9</button>
+            <button onclick="escreverDisplay('*')" class="specialkeys">*</button>
+            <button onclick="escreverDisplay('.')">.</button>
+            <button onclick="escreverDisplay('0')">0</button>
+            <button onclick="clearDisplay()" class="specialkeys">C</button>
+            <button onclick="calculate()" class="specialkeys">=</button>
+        </div>
+
+    </div>
+    
+    <script src="calculate.js"></script>
+</body>
+</html>
